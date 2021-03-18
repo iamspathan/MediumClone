@@ -30,9 +30,9 @@ object ConduitClient {
 
 
     val okhttpBuilder = OkHttpClient.Builder()
-        .readTimeout(5, SECONDS)
-        .callTimeout(5, SECONDS)
-        .connectTimeout(5,SECONDS)
+        .readTimeout(10, SECONDS)
+        .callTimeout(10, SECONDS)
+        .connectTimeout(10,SECONDS)
 
 
 

@@ -53,7 +53,7 @@ interface ConduitAuthAPI {
         @Path("slug") slug: String,
     ): Response<ArticleResponse>
 
-    @POST("api/articles")
+    @POST("articles")
     suspend fun createArticle(
         @Body articleRequest: ArticleRequest,
         ): Response<ArticleResponse>
