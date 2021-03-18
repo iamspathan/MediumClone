@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="dev.iamspathan.realworldio.ui.newarticle.NewArticleFragment">
+
+    <EditText
+        android:id="@+id/articleTitleEditText"
+        android:hint="Article Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/articleAboutEditText"
+        android:hint="What's this Article About ?"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/articleBodyEditText"
+        android:lines="5"
+        android:gravity="top"
+        android:hint="Short Bio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <EditText
+        android:id="@+id/articleTagsEditText"
+        android:hint="Enter Tags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_margin="50dp"
+        android:id="@+id/publishArticleButton"
+        android:text="Publish Article"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

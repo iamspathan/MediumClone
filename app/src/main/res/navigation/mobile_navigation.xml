@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@+id/mobile_navigation"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/nav_feed">
+
+    <fragment
+        android:id="@+id/nav_feed"
+        android:name="dev.iamspathan.realworldio.ui.feed.GlobalFeedFragment"
+        android:label="@string/menu_feed"
+        tools:layout="@layout/fragment_feed">
+        <action
+            android:id="@+id/actionGlobalfeed_openArticle"
+            app:destination="@id/nav_article"
+            app:popUpTo="@id/nav_feed" />
+        <argument
+            android:name="@string/arg_article_id"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_nav_feed_to_newArticleFragment"
+            app:destination="@id/newArticleFragment"
+            app:popUpTo="@id/nav_feed" />
+
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_my_feed"
+        android:name="dev.iamspathan.realworldio.ui.feed.MyFeedFragment"
+        android:label="@string/menu_my_feed"
+        tools:layout="@layout/fragment_feed">
+        <action
+            android:id="@+id/action_myFeed_openArticle"
+            app:destination="@id/nav_article"
+            app:popUpTo="@id/nav_my_feed" />
+
+        <argument
+            android:name="@string/arg_article_id"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_nav_my_feed_to_newArticleFragment"
+            app:destination="@id/newArticleFragment"
+            app:popUpTo="@id/nav_my_feed" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_auth"
+        android:name="dev.iamspathan.realworldio.ui.auth.AuthFragment"
+        android:label="@string/menu_auth"
+        tools:layout="@layout/fragment_auth" />
+
+
+    <fragment
+        android:id="@+id/nav_setting"
+        android:name="dev.iamspathan.realworldio.ui.settings.SettingFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings" />
+
+
+    <fragment
+        android:id="@+id/nav_article"
+        android:name="dev.iamspathan.realworldio.ui.article.ArticleFragment"
+        tools:layout="@layout/fragment_article" />
+    <fragment
+        android:id="@+id/newArticleFragment"
+        android:name="dev.iamspathan.realworldio.ui.newarticle.NewArticleFragment"
+        android:label="fragment_newarticle"
+        tools:layout="@layout/fragment_newarticle" />
+
+
+</navigation>
